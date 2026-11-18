@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joe Paul K — AI/ML Engineer</title>
+<meta name="description" content="Joe Paul K — AI/ML engineer. LLM systems, RAG, voice agents, radar signal simulation, and a multiplayer arena shooter on the side.">
+<meta property="og:title" content="Joe Paul K — AI/ML Engineer">
+<meta property="og:description" content="Finding signal in noise. LLM systems, radar simulation, and a multiplayer shooter.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110D'/%3E%3Cpath d='M4 26 Q16 -4 28 26' fill='none' stroke='%23FF4A1C' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Hanken+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="paper">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="brand" href="#surface">JPK<b>.</b></a>
+  <div class="depth-pill"><i>Depth</i><b id="depth">00.0 m</b></div>
+  <nav>
+    <a href="#radar">Lab</a><a href="#work">Work</a><a href="#play">Play</a><a href="#path">Path</a><a href="#contact">Contact</a>
+    <a class="cv" href="assets/Joe_Paul_K_CV.pdf" download>CV ↓</a>
+  </nav>
+</header>
+<div class="rail" aria-hidden="true"><div class="ticks"></div><div class="mark" id="mark" data-s="Surface"></div></div>
+
+<main>
+<!-- 0 · SURFACE -->
+<section class="hero" id="surface" data-theme="paper" data-stratum="Surface">
+  <div class="hero-meta mono"><span>AI / ML Engineer</span><span>Aluva, Kerala — 10.11°N 76.35°E</span><span>Portfolio 2026</span></div>
+  <div class="stage" id="stage">
+    <h1 class="name" aria-label="Joe Paul K"><span class="line l1"><i>Joe</i></span><span class="line l2"><i>Paul K</i></span></h1>
+    <div class="rings"><i></i><i></i><i></i><i></i></div>
+    <div class="portrait"><img src="assets/joe.png" alt="Joe Paul K" width="570" height="790"></div>
+    <div class="name ghost" aria-hidden="true"><span class="line l1"><i>Joe</i></span><span class="line l2"><i>Paul K</i></span></div>
+    <div class="hero-foot">
+      <div class="pitch"><h2>Finding signal in noise.</h2><p>I build language-model systems, voice agents and a radar simulator that searches for people under landslide debris.</p></div>
+      <div class="cue mono">Scroll to descend<br><span class="arrow">↓</span></div>
+    </div>
+  </div>
+  <div class="ground mono"><span>Ground level</span><span>0.0 m</span><span>Begin descent</span></div>
+</section>
+
+<!-- 1 · STATEMENT -->
+<section class="statement" id="statement" data-theme="loam" data-stratum="Topsoil">
+  <div class="pin"><div class="wrap" style="padding-left:calc(var(--gut) + 40px)">
+    <span class="tag">What I do</span>
+    <p class="say" id="say">I build systems that find the <b>signal in the noise</b> — language models that answer from a company's own knowledge, voice agents that <b>pick up the phone</b>, and a radar simulator that looks for <b>people buried under landslides.</b></p>
+    <div class="facts mono">
+      <div><b>1.5+ yrs</b>building GenAI &amp; ML</div>
+      <div><b>B.Tech</b>CSE — AI &amp; ML</div>
+      <div><b>Self-hosted</b>LLMs on an NVIDIA DGX Spark</div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 2 · RADAR LAB -->
+<section class="radar" id="radar" data-theme="scan" data-stratum="Scan zone">
+  <div class="pin">
+    <div>
+      <span class="tag">Research &amp; development — 2026</span>
+      <h2>Buried-person <em>detection</em> radar</h2>
+      <div class="steps">
+        <div class="step on"><b>01 / SIMULATE</b><h3>Model the ground before trusting it.</h3><p>A physics-based ground-penetrating radar simulator: propagation, attenuation, link budget, depth and SNR, A-scans and radargrams through wet soil, saturated clay, mud, rock and mixed layers.</p></div>
+        <div class="step"><b>02 / GROUND IT</b><h3>Real soil, real places.</h3><p>SoilGrids data builds location-specific soil profiles for Munnar and Wayanad, the Kerala hills where landslides actually happen.</p></div>
+        <div class="step"><b>03 / DETECT</b><h3>Teach a model to hear a weak echo.</h3><p>Synthetic radar datasets and ML experiments for weak-echo detection, with failure analysis across frequency, conductivity and depth. Now working on stationary targets under static clutter using multi-scan analysis and spatial subtraction.</p></div>
+      </div>
+      <div class="stepdots"><i class="on"></i><i></i><i></i></div>
+      <div class="chips" style="margin-top:22px"><span>Python</span><span>NumPy</span><span>scikit-learn</span><span>Signal processing</span><span>SoilGrids</span></div>
+    </div>
+    <div class="scope">
+      <div class="scope-head mono"><span>B-scan — toy model, runs in your browser</span><span class="live">Scanning</span></div>
+      <div class="screen">
+        <div class="axis"><span>0 m</span><span>1</span><span>2</span><span>3</span><span>4</span></div>
+        <canvas id="scan" width="440" height="250" aria-label="Simulated radargram showing a hyperbolic echo from a buried target"></canvas>
+        <div class="lock" id="lock"><span></span></div>
+      </div>
+      <div class="scope-read">
+        <div>Wave speed<b id="r-v">–</b></div><div>Two-way time<b id="r-t">–</b></div><div>Attenuation<b id="r-a">–</b></div><div>Echo SNR<b id="r-s">–</b></div>
+      </div>
+      <div class="controls">
+        <div class="seg" id="soils"><button data-s="sand">Dry sand</button><button data-s="wet" class="on">Wet soil</button><button data-s="clay">Saturated clay</button></div>
+        <label>Target depth <input type="range" id="dep" min="0.3" max="4" step="0.1" value="1.2"> <span id="dep-v">1.2 m</span></label>
+      </div>
+      <p class="note">Change the soil and bury the target deeper: the echo fades into the noise. This is a simplified low-loss model for illustration; the real simulator handles layered soils, clutter and link budget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · WORK -->
+<section class="work" id="work" data-theme="clay" data-stratum="Clay">
+  <div class="pin"><div class="track" id="track">
+    <div class="work-title"><span class="tag">Selected work</span><h2 class="big" style="margin-top:16px">Seven <em>returns</em></h2><p>Things I built end to end, from model to API to the screen. Keep scrolling, they move sideways.</p></div>
+
+    <article class="card"><div class="no mono"><span>01</span><span>2025 — 26</span></div>
+      <svg viewBox="0 0 200 110"><circle cx="30" cy="30" r="2"/><circle cx="52" cy="70" r="2"/><circle cx="75" cy="22" r="2"/><circle cx="160" cy="28" r="2"/><circle cx="175" cy="80" r="2"/><circle cx="25" cy="90" r="2"/><circle cx="140" cy="92" r="2"/><circle cx="108" cy="46" r="2"/><circle cx="92" cy="72" r="2"/><circle cx="124" cy="68" r="2"/><circle class="d" cx="106" cy="60" r="27"/><path class="a" pathLength="1" d="M106 60L108 46M106 60L92 72M106 60L124 68"/><circle class="f" cx="106" cy="60" r="4"/></svg>
+      <h3>Local RAG &amp; agent system</h3><p>A fully local pipeline for question answering over documents, with memory. LangGraph agents handle tool calling, execution loops and routing across AI, security, coding and knowledge experts.</p>
+      <div class="chips"><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Ollama</span></div></article>
+
+    <article class="card"><div class="no mono"><span>02</span><span>2024 — 25</span></div>
+      <svg viewBox="0 0 200 110"><circle cx="100" cy="22" r="13"/><circle cx="48" cy="86" r="13"/><circle cx="152" cy="86" r="13"/><path class="a" pathLength="1" d="M90 33L58 74M62 86L138 86M142 74L110 33"/><path class="pop" d="M94 22h12M100 16v12M42 86h12M146 82l6 8 6-8"/></svg>
+      <h3>Multi-agent workflow</h3><p>Supervisor, coding and security-analysis agents share state in LangGraph to generate, review and refine each other's output. Quantized local models keep inference fast.</p>
+      <div class="chips"><span>LangGraph</span><span>Ollama</span><span>Python</span></div></article>
+
+    <article class="card"><div class="no mono"><span>03</span><span>2026</span></div>
+      <svg viewBox="0 0 200 110"><rect x="18" y="20" width="70" height="70"/><path class="d" d="M18 43h70M18 67h70M41 20v70M65 20v70"/><path class="pop" d="M98 55h10M103 50v10"/><rect class="a" pathLength="1" x="120" y="20" width="14" height="70"/><rect class="a" pathLength="1" x="142" y="48" width="44" height="14"/></svg>
+      <h3>LoRA fine-tuning pipeline</h3><p>LoRA and QLoRA fine-tuning with instruction-tuning datasets, lightweight domain adapters, and an inference pipeline to load and serve them.</p>
+      <div class="chips"><span>PyTorch</span><span>Transformers</span><span>PEFT</span></div></article>
+
+    <article class="card"><div class="no mono"><span>04</span><span>2025 — now</span></div>
+      <svg viewBox="0 0 200 110"><circle class="d" cx="100" cy="58" r="46"/><circle class="d" cx="100" cy="58" r="26"/><path d="M10 96L60 70 96 84 150 40 192 30M40 12L70 50 60 70M150 40L164 100"/><path class="a" pathLength="1" d="M100 58L132 34"/><circle class="f" cx="100" cy="58" r="4"/><circle class="f pop" cx="132" cy="34" r="4"/><circle class="pop" cx="74" cy="44" r="3"/><circle class="pop" cx="118" cy="82" r="3"/></svg>
+      <h3>Sahayi</h3><p>A deployed marketplace that matches local workers with people nearby by location. OTP verification, token payments, real-time notifications, ratings and bookings.</p>
+      <div class="chips"><span>FastAPI</span><span>PostgreSQL</span><span>OpenStreetMap</span><span>Render</span></div></article>
+
+    <article class="card"><div class="no mono"><span>05</span><span>2025</span></div>
+      <svg viewBox="0 0 200 110"><path class="d" d="M10 58h180"/><path class="a" pathLength="1" d="M10 62L30 40 46 50 62 24 80 46 96 76 112 88 128 66 146 72 162 38 190 20"/><path class="pop" d="M14 16h10M19 11v10M14 98h10"/></svg>
+      <h3>News sentiment pipeline</h3><p>An automated ETL pipeline that fetches, processes and classifies news with sentiment models, runs serverless on AWS and feeds live dashboards.</p>
+      <div class="chips"><span>AWS Lambda</span><span>ECS</span><span>RDS</span><span>Streamlit</span></div></article>
+
+    <article class="card"><div class="no mono"><span>06</span><span>2024 — 25</span></div>
+      <svg viewBox="0 0 200 110"><path pathLength="1" d="M20 14h160v84H20zM20 58h74M94 14v84M94 40h86M140 40v58"/><g class="pop"><circle class="a" cx="94" cy="58" r="5"/><circle class="a" cx="94" cy="40" r="5"/><circle class="a" cx="140" cy="40" r="5"/><circle class="a" cx="20" cy="58" r="5"/><circle class="a" cx="140" cy="98" r="5"/></g></svg>
+      <h3>Floor plan estimator</h3><p>Reads a floor plan image and returns the cement, bricks, steel and paint it needs, with cost. A custom YOLO model finds wall junctions, skeletonization measures walls, OCR reads dimensions.</p>
+      <div class="chips"><span>YOLO</span><span>OpenCV</span><span>EasyOCR</span></div></article>
+
+    <article class="card"><div class="no mono"><span>07</span><span>2025 — B.Tech final</span></div>
+      <svg viewBox="0 0 200 110"><path pathLength="1" d="M14 55v0M24 46v18M34 36v38M44 48v14M54 26v58M64 42v26M74 50v10M84 38v34"/><ellipse cx="146" cy="55" rx="20" ry="27"/><path class="pop" d="M138 50h4M150 50h4M140 66q6 5 12 0"/><path class="a" pathLength="1" d="M116 30V18h12M176 30V18h-12M116 80v12h12M176 80v12h-12"/></svg>
+      <h3>Voice assistant with face login</h3><p>Speech recognition plus face-recognition login, automating files, browser, email and mouse control by voice.</p>
+      <div class="chips"><span>Python</span><span>Speech recognition</span><span>OpenCV</span></div></article>
+
+    <div class="end-card"><span class="tag">More on GitHub</span><br><br><a href="https://github.com/j0E9" target="_blank" rel="noopener">github.com<br>/j0E9 ↗</a></div>
+  </div></div>
+</section>
+
+<!-- 4 · PLAY -->
+<section class="play" id="play" data-theme="play" data-stratum="Cavity">
+  <div class="wrap">
+    <span class="tag" style="padding-left:40px" data-reveal>Off the clock</span>
+    <h2 class="big split" style="margin-top:14px">I also make <em>a game.</em></h2>
+    <div class="play-grid">
+      <div data-reveal>
+        <p class="lead"><b>Skyrift Arena</b> is a multiplayer arena shooter I build for fun and play with friends. It runs in a browser, on desktop and on phones, and it taught me more about networking than any course did.</p>
+        <div class="spec">
+          <div><span>Engine</span><span>Three.js client, one shared match engine in JavaScript</span></div>
+          <div><span>Netcode</span><span>WebSocket on LAN, peer-to-peer WebRTC rooms online, compact state snapshots</span></div>
+          <div><span>Resilience</span><span>Host migration: when the host drops, another player takes over and the match continues</span></div>
+          <div><span>Platforms</span><span>Mac, Windows, Android, iPhone, web</span></div>
+          <div><span>Content</span><span>16 weapons, 4 maps, 7 characters with special abilities, team mode</span></div>
+          <div><span>Also use</span><span>Unity, Unreal Engine (Blueprints), Blender</span></div>
+        </div>
+      </div>
+      <div class="net" data-reveal style="--d:.15s">
+        <div class="net-bar mono"><span>Host migration — try it</span><button id="drop">Drop the host</button></div>
+        <svg id="net" viewBox="0 0 320 220"></svg>
+        <div class="net-log" id="netlog">5 players connected. Click the orange host to pull its plug.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PATH -->
+<section class="path" id="path" data-theme="rock" data-stratum="Bedrock">
+  <div class="wrap">
+    <span class="tag" data-reveal>Experience</span>
+    <h2 class="big split" style="margin-top:14px">The <em>path</em> down</h2>
+    <div class="roles">
+      <div class="role" data-reveal><div class="when">2026 — Now<small>JUN 2026 — PRESENT</small></div><div><h3>Junior AI Engineer</h3><p>Codnov.AI — Empire Overseas Education Group</p></div>
+        <ul><li>RAG pipelines on ChromaDB that answer from internal company knowledge.</li><li>AI calling agents wired into Exotel telephony for live calls.</li><li>Self-hosted LLMs on an NVIDIA DGX Spark, so no data leaves for external LLM APIs.</li><li>UI refinement and bug fixing across the products.</li></ul></div>
+      <div class="role" data-reveal><div class="when">2025 — 26<small>MAY 2025 — MAY 2026</small></div><div><h3>ML Engineer</h3><p>GoFreelab Technologies — Ernakulam</p></div>
+        <ul><li>Built ML models from data preprocessing through training.</li><li>Encoded raw data into embeddings and model-ready features.</li><li>Created vector databases for retrieval-based applications.</li></ul></div>
+      <div class="role" data-reveal><div class="when">2024<small>MAY 2024</small></div><div><h3>Machine Learning Intern</h3><p>Secneural LLC — Qatar</p></div>
+        <ul><li>NLP document parsing pipeline that pulls structured data from unstructured files.</li><li>Improved extraction accuracy with iterative tuning and custom preprocessing.</li></ul></div>
+    </div>
+    <div class="edu mono" data-reveal>
+      <div><b>B.Tech, Computer Science (AI &amp; ML)</b>APJ Abdul Kalam Technological University — 2021–2025</div>
+      <div><b>Malayalam, English</b>Native, fluent</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · STACK -->
+<section class="stack" id="stack" data-theme="rock" data-stratum="Bedrock">
+  <div class="wrap"><span class="tag" data-reveal>Toolkit</span></div>
+  <div class="belts" id="belts">
+    <div class="belt" style="--t:46s"><span class="lab">GenAI &amp; LLMs</span><div class="run" data-items="RAG pipelines|AI agents|Multi-agent systems|Tool calling|LangChain|LangGraph|Voice agents|Local LLM deployment|LLM evaluation"></div></div>
+    <div class="belt" style="--t:38s"><span class="lab">Fine-tuning</span><div class="run" data-items="LoRA|QLoRA|PEFT|Hugging Face Transformers|Quantization|Inference optimization|Ollama"></div></div>
+    <div class="belt" style="--t:52s"><span class="lab">ML &amp; vision</span><div class="run" data-items="PyTorch|TensorFlow|scikit-learn|NLP|Embeddings|Signal processing|OpenCV|YOLO|EasyOCR"></div></div>
+    <div class="belt" style="--t:42s"><span class="lab">Data</span><div class="run" data-items="PostgreSQL|MySQL|MongoDB|Snowflake|ChromaDB|ETL pipelines|NumPy|Pandas|Power BI"></div></div>
+    <div class="belt" style="--t:48s"><span class="lab">Build &amp; ship</span><div class="run" data-items="Python|C++|SQL|FastAPI|Flask|AWS Lambda · S3 · ECS · RDS|Docker|CI/CD|Git"></div></div>
+  </div>
+</section>
+
+<!-- 7 · CONTACT -->
+<section class="contact" id="contact" data-theme="core" data-stratum="Target">
+  <div class="wrap">
+    <span class="tag" data-reveal>12.0 m — echo confirmed</span><br>
+    <div class="acq" id="acq"><h2 class="big split">Target <em>acquired.</em></h2></div><br>
+    <a class="mail" href="mailto:joepaul72022@gmail.com" data-reveal>joepaul72022@gmail.com</a>
+    <div class="links" data-reveal style="--d:.1s">
+      <a class="solid" href="assets/Joe_Paul_K_CV.pdf" download>Download CV ↓</a>
+      <a href="https://linkedin.com/in/j0e9" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/j0E9" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Joe Paul K</span><span>Aluva, Kerala, India</span><a href="#surface" style="text-decoration:none">Back to surface ↑</a></footer>
+</section>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
